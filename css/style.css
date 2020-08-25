@@ -1,0 +1,238 @@
+@font-face {
+    font-family: coco;
+    src: url(../font/cocogoose.ttf);
+}
+
+@font-face {
+    font-family: cocob;
+    src: url(../font/cocogooesb.ttf);
+}
+
+@font-face {
+    font-family: champ;
+    src: url(../font/comfortaab.ttf);
+}
+
+#section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-image: url('../image/background.png');
+    background-size: cover;
+    float: None;
+    box-shadow: 0px 10px 20px 20px#f1d782;
+}
+
+#mainlogoframe {
+    margin: 0;
+    text-align: center;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    /* background-color: #f1d782; */
+}
+
+.logo {
+    display: inline-block;
+    margin: auto auto;
+    max-height: 60%;
+    max-width: 60%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: coco;
+    font-size: 4.3vmax;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0.3vmax;
+}
+
+#launchdate {
+    font-family: champ;
+    font-size: 0.9vmax;
+    letter-spacing: 0.05em;
+    margin: 0;
+    color: white;
+    padding-bottom: 5vmax;
+}
+
+#intro {
+    color: #494949;
+    text-align: center;
+    font-family: coco;
+    font-size: 1.2vmax;
+    line-height: 1.8vmax;
+    letter-spacing: 0.08vmax;
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #F2BB13;
+    color: white;
+    border: 1.5px solid white;
+    font-family: coco;
+    font-size: 1.5vmax;
+    padding: 0.75vmax;
+    padding-bottom: 0.5vmax;
+}
+
+button:hover,
+button:focus {
+    background-color: white;
+    color: #F2BB13;
+    outline: None;
+}
+
+#cglogoframe {
+    margin: 0;
+    text-align: center;
+    height: 7%;
+    /* background-color: #5a5a5a; */
+}
+
+.cglogo {
+    display: inline-block;
+    margin: auto auto;
+    max-height: 85%;
+    max-width: 85%;
+}
+
+.by {
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    color: white;
+    font-family: coco;
+    width: 98%;
+    letter-spacing: 1px;
+    font-size: 1.5vmax;
+}
+
+
+/* Leaderboard */
+
+#leaderboard {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../image/boardbackground.png');
+    float: None;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+#board {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+h2 {
+    color: #F2BB13;
+    text-align: center;
+    padding-bottom: 1vmax;
+    font-family: coco;
+    font-size: 2.8vmax;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8vmax;
+}
+
+h4 {
+    color: #F2BB13;
+    text-align: center;
+    font-family: champ;
+    font-size: 1vmax;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 2vmax;
+}
+
+th,
+td {
+    color: #5a5a5a;
+    font-family: champ;
+    letter-spacing: 0.2px;
+    padding: 5px;
+    text-align: center;
+    font-size: 2.2vmin;
+}
+
+th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-family: coco;
+    font-size: 3vmin;
+    color: #F2BB13;
+}
+
+#avatar {
+    width: 4vmin;
+    height: 4vmin;
+    object-fit: cover;
+    border: 3px solid #F2BB13;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#league {
+    width: 5vmin;
+    height: auto;
+}
+
+#contestant::-webkit-scrollbar {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+}
+
+#contestant {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+
+/* Responsive UI */
+
+@media screen and (max-width: 1200px) {
+    #intro {
+        font-size: 1.5vmax;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #intro {
+        font-size: 2vmax;
+        line-height: 2.8vmax;
+    }
+    button {
+        font-size: 2.8vmax;
+    }
+}
