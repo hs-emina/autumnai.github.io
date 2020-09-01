@@ -50,6 +50,7 @@ h1 {
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 0.3vmax;
+    text-shadow: 1px 1px 15px #b69e34;
 }
 
 #launchdate {
@@ -59,6 +60,7 @@ h1 {
     margin: 0;
     color: white;
     padding-bottom: 5vmax;
+    text-shadow: 2px 2px 15px #b69e34;
 }
 
 #intro {
@@ -122,6 +124,7 @@ button:focus {
     width: 98%;
     letter-spacing: 1px;
     font-size: 1.5vmax;
+    text-shadow: 2px 2px 15px #b69e34;
 }
 
 
