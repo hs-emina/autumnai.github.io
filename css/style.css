@@ -131,7 +131,6 @@ button:focus {
 /* Leaderboard */
 
 #leaderboard {
-    min-height: 100vh;
     width: 100%;
     background-image: url('../image/boardbackground.png');
     float: None;
@@ -140,12 +139,24 @@ button:focus {
     background-position: center;
 }
 
-#board {
+#islington_board {
     width: 80%;
     align-items: center;
     justify-content: center;
-    margin: auto;
     margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin: auto;
+}
+
+#general_board {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin: auto;
 }
 
 h2 {
@@ -159,6 +170,20 @@ h2 {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 8vmax;
+}
+
+h3 {
+    color: #5a5a5a;
+    text-align: center;
+    padding-bottom: 1vmax;
+    font-family: champ;
+    font-size: 1.5vmax;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8vmax;
+    line-height: 3vmax;
 }
 
 h4 {
