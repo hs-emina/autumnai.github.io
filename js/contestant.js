@@ -1,5 +1,6 @@
 var alldata = JSON.parse(contestant);
 
+
 // For Islington Leaderboard
 var islington = alldata[3].slice(0, 101);
 
@@ -26,7 +27,7 @@ if (islington.length == 0) {
                 output += '<td style="text-align: right"><img id="avatar" src="image/default.png" loading="lazy" alt="' + islington[i].pseudo + '"></td>';
             }
 
-            output += '<td style="text-align: left; padding-left:3%">' + islington[i].pseudo + '</td>';
+            output += '<td style="text-align: left; padding-left:3%"><a id = "profile" href = "profile.html?pseudo=' + islington[i].pseudo + '">' + islington[i].pseudo + '</a></td>';
             output += '<td>' + (i + 1) + '</td>';
             output += '<td>' + islington[i].globalRank + '</td>';
 
@@ -87,7 +88,7 @@ function generalBoard() {
             output += '<td style="text-align: right"><img id="avatar" src="image/default.png" loading="lazy" alt="' + general[i].pseudo + '"></td>';
         }
 
-        output += '<td style="text-align: left; padding-left:3%">' + general[i].pseudo + '</td>';
+        output += '<td style="text-align: left; padding-left:3%"><a id = "profile" href = "profile.html?pseudo=' + general[i].pseudo + '">' + general[i].pseudo + '</a></td>';
         output += '<td>' + (i + 1) + '</td>';
         output += '<td>' + general[i].globalRank + '</td>';
 

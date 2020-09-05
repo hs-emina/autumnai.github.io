@@ -199,7 +199,8 @@ h4 {
 }
 
 th,
-td {
+td,
+#profile {
     color: #5a5a5a;
     font-family: champ;
     letter-spacing: 0.2px;
