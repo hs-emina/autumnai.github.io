@@ -26,8 +26,9 @@
 
 #mainlogoframe {
     margin: 0;
+    padding-top: 5vmax;
     text-align: center;
-    height: 20%;
+    height: 25%;
     display: flex;
     align-items: center;
     /* background-color: #f1d782; */
@@ -35,22 +36,9 @@
 
 .logo {
     display: inline-block;
-    margin: auto auto;
-    max-height: 60%;
-    max-width: 60%;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-    font-family: coco;
-    font-size: 4.3vmax;
-    letter-spacing: 0.05em;
-    margin: 0;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 0.3vmax;
-    text-shadow: 1px 1px 15px #b69e34;
+    margin: 0 auto;
+    max-height: 50vamx;
+    max-width: 50vmax;
 }
 
 #launchdate {
@@ -73,7 +61,7 @@ h1 {
     margin: 0;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 2%;
+    padding-bottom: 2.25%;
 }
 
 a {
@@ -101,20 +89,6 @@ button:focus {
     outline: None;
 }
 
-#cglogoframe {
-    margin: 0;
-    text-align: center;
-    height: 7%;
-    /* background-color: #5a5a5a; */
-}
-
-.cglogo {
-    display: inline-block;
-    margin: auto auto;
-    max-height: 85%;
-    max-width: 85%;
-}
-
 .by {
     position: absolute;
     text-align: right;
@@ -125,6 +99,14 @@ button:focus {
     letter-spacing: 1px;
     font-size: 1.5vmax;
     text-shadow: 2px 2px 15px #b69e34;
+}
+
+.sponsorLogo {
+    position: absolute;
+    top: 0;
+    width: 8vmax;
+    margin-top: 2vmax;
+    margin-left: 4vmax;
 }
 
 
