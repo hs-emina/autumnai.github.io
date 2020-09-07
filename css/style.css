@@ -24,21 +24,9 @@
     box-shadow: 0px 10px 20px 20px#f1d782;
 }
 
-#mainlogoframe {
-    margin: 0;
-    padding-top: 5vmax;
-    text-align: center;
-    height: 25%;
-    display: flex;
-    align-items: center;
-    /* background-color: #f1d782; */
-}
-
 .logo {
-    display: inline-block;
-    margin: 0 auto;
-    max-height: 50vamx;
-    max-width: 50vmax;
+    max-height: 38vmax;
+    max-width: 38vmax;
 }
 
 #launchdate {
@@ -58,10 +46,9 @@
     font-size: 1.2vmax;
     line-height: 1.8vmax;
     letter-spacing: 0.08vmax;
-    margin: 0;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 2.25%;
+    padding-bottom: 1%;
 }
 
 a {
