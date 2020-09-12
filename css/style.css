@@ -75,6 +75,21 @@ button:focus {
     outline: None;
 }
 
+#cglogoframe {
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+    height: 7%;
+    /* background-color: #5a5a5a; */
+}
+
+.cglogo {
+    display: inline-block;
+    margin: auto auto;
+    max-height: 3vmax;
+    max-width: 3vmax;
+}
+
 .by {
     position: absolute;
     text-align: right;
