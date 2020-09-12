@@ -35,7 +35,7 @@
     letter-spacing: 0.05em;
     margin: 0;
     color: white;
-    padding-bottom: 5vmax;
+    padding-bottom: 2vmax;
     text-shadow: 2px 2px 15px #b69e34;
 }
 
@@ -43,12 +43,12 @@
     color: #494949;
     text-align: center;
     font-family: coco;
-    font-size: 1.2vmax;
+    font-size: 1.25vmax;
     line-height: 1.8vmax;
     letter-spacing: 0.08vmax;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0.5%;
 }
 
 a {
@@ -66,7 +66,6 @@ button {
     font-family: coco;
     font-size: 1.5vmax;
     padding: 0.75vmax;
-    padding-bottom: 0.5vmax;
 }
 
 button:hover,
@@ -165,6 +164,10 @@ h4 {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 2vmax;
+}
+
+#istimer {
+    padding-bottom: 0vmax;
 }
 
 th,

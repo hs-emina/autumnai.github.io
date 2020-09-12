@@ -12,15 +12,15 @@ if (islington.length == 0) {
     document.getElementById("islington_board").innerHTML = '<tr><h3 id = "NoSubmission">No one has submitted yet. Be the first one to submit out of ' + alldata[4] + ' players ! <br> \\( * o * )/</h3></tr>';
 
 } else {
-    document.getElementById("islington_remaining").innerHTML = alldata[4] + " players have yet to submit";
+    document.getElementById("islington_remaining").innerHTML = "And " + alldata[4] + " more players who haven't submitted yet . . .";;
 
     var counter = 0;
     var runner = setInterval(islingtonBoard, 0);
 
     function islingtonBoard() {
-        var output = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th></tr></br>';
+        var finaloutput = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th></tr></br>';
         for (var i = 0; i < islington.length; i++) {
-
+            var output = "";
             if (islington[i].avatar != "default") {
                 output += '<td style="text-align: right"><img id="avatar" src="https://static.codingame.com/servlet/fileservlet?id=' + islington[i].avatar + '&amp;format=navigation_avatar" loading="lazy" alt="' + islington[i].pseudo + '"></td>';
             } else {
@@ -42,9 +42,9 @@ if (islington.length == 0) {
 
             output += '<td><img id="league" src="image/league/' + islington[i].league + '.png"/></td>';
             output += '<td>' + islington[i].language + '</td>';
-            output = '<tr>' + output + '</tr>';
+            finaloutput += '<tr>' + output + '</tr>';
         }
-        document.getElementById("islington_board").innerHTML = output;
+        document.getElementById("islington_board").innerHTML = finaloutput;
 
         if (counter == 0) {
             changeInterval();
@@ -66,12 +66,12 @@ if (islington.length == 0) {
 
 // For General Leaderboard
 
-var general = alldata[1].slice(0, 101);
+var general = alldata[1].slice(0, 151);
 
 if (general.length > 100) {
     document.getElementById("general").innerHTML = "Top " + general.length + " players out of " + alldata[1].length + " players";
 }
-document.getElementById("general_remaining").innerHTML = alldata[2] + " players have yet to submit";
+document.getElementById("general_remaining").innerHTML = "And " + alldata[2] + " more players who haven't submitted yet . . .";
 
 
 
@@ -79,9 +79,9 @@ var gcounter = 0;
 var grunner = setInterval(generalBoard, 0);
 
 function generalBoard() {
-    var output = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th></tr></br>';
+    var finaloutput = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th><th>Country</th></tr></br>';
     for (var i = 0; i < general.length; i++) {
-
+        var output = "";
         if (general[i].avatar != "default") {
             output += '<td style="text-align: right"><img id="avatar" src="https://static.codingame.com/servlet/fileservlet?id=' + general[i].avatar + '&amp;format=navigation_avatar" loading="lazy" alt="' + general[i].pseudo + '"></td>';
         } else {
@@ -103,9 +103,10 @@ function generalBoard() {
 
         output += '<td><img id="league" src="image/league/' + general[i].league + '.png"/></td>';
         output += '<td>' + general[i].language + '</td>';
-        output = '<tr>' + output + '</tr>';
+        output += '<td><img src="https://www.countryflags.io/' + general[i].country + '/flat/32.png"></td>';
+        finaloutput += '<tr>' + output + '</tr>';
     }
-    document.getElementById("general_board").innerHTML = output;
+    document.getElementById("general_board").innerHTML = finaloutput;
 
     if (gcounter == 0) {
         changeGInterval();

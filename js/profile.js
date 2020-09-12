@@ -1,8 +1,10 @@
-var username = document.location.search.replace(/^.*?\=/, ''); // retrive indicated username
 var alldata = JSON.parse(stats); // load stats
 
+var username = document.location.search.replace(/^.*?\=/, ''); // retrive indicated username
 
-let image = ''
+
+
+let image = '';
 if (alldata[username][0] != "default") {
     image = '<img id="avatar" src="https://static.codingame.com/servlet/fileservlet?id=' + alldata[username][0] + '&amp;format=navigation_avatar" loading="lazy" alt="' + username + '">'
 } else {

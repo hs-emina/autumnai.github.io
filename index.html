@@ -27,10 +27,10 @@
 
     <head>
 
-        <body style="margin:0; position:relative;">
+        <body style="margin:0;position:relative;">
 
             <div>
-
+                
                 <div id="section">
 
                     <a href="https://islington.edu.np/" target="blank"><img class="sponsorLogo" src="image/islington.png" alt="sponsor" /></a>
@@ -43,12 +43,20 @@
                             
                             <p id ="launchdate">From  2020-09-12 7am UTC  to  2020-09-19 7am UTC</p>
 
-                            <p id="intro">A seven-day programming contest organized with the collaboration of <a href="https://www.codingame.com/home" target="_blank" style="color:white">CodinGame</a> .</p>
-                            <p id="intro">This competition is dedicated to motivate <a href="https://islington.edu.np/" target="blank" style="color:white">Islington</a> students practice Artificial Intelligence (AI) using Codingame's interface. Even though, only Islington students qualify for prizes, everyone is invited to participate and have fun.</p>
+                            <p id="intro">
+                                A seven-day programming contest organized with the collaboration of <a href="https://www.codingame.com/home" target="_blank" style="color:white">CodinGame</a>,
+                                dedicated to motivate <a href="https://islington.edu.np/" target="blank" style="color:white">Islington</a> students practice Artificial Intelligence (AI) using
+                                Codingame's interface. Even though, only Islington students qualify for prizes, everyone is invited to participate and have fun.
+                            </p>
 
-                            <p id="intro">The details of the game will be revealed on the launch day.</p>
+                            <p id="intro">The game for the contest is <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu" target="_blank" style="color:white">Code of Kutulu</a>. You control your explorer 
+                                (character) and compete with three other players in a set of pre-generated maps. The goal is to write an Artificial Intelligence (AI) for Code of Kutulu that is 
+                                able to survive the longest.
+                            </p>
+                            
+                            <p id="intro">Find the full game rules <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu" target="_blank" style="color:white">here</a>.</p>
 
-                            <p id="intro" style="color:white; padding-bottom:0.5vmax;text-shadow: 2px 2px 15px #b69e34;">Register for the contest here to enter the Autumn AI leaderboard:</p>
+                            <p id="intro" style="color:white;text-shadow: 2px 2px 15px #b69e34;">Register for the contest here to enter the Autumn AI leaderboard:</p>
                             <p id="intro">
                                 <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdMFTm6OjV7LbppwmwxeMMsKOe7XJJzfEyFebz_NSaIPYq-rQ/viewform','_blank')">General</button>
                                 <button style="margin-left:3%" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfaVyQW41XQC-KlNWnCLJ0nVmQ_My2hy2T324cdxzG2H-h8Hw/viewform','_blank')">Islington</button>
@@ -62,7 +70,38 @@
 
                 </div>
 
+
+                <div id="leaderboard" style="padding-bottom:3   %">
+
+                    <h2>Islignton Leaderboard</h2>
+                    <h4 id = "islington"></h4>
+                    <h4 id = "istimer" style = "color:#979F9B"></h4>
+
+                    <div id="contestant">
+                        <table id="islington_board"></table>
+                    </div>
+                    <h4 id = "islington_remaining" style = "margin-top:2%;color:#68706C"></h4>
+
+                </div>
+
+                <div id="leaderboard" style="padding-bottom:5%">
+
+                    <h2>General Leaderboard</h2>
+                    <h4 id = "general"></h4>
+                    <h4 id = "gtimer" style = "color:#979F9B"></h4>
+
+                    <div id="contestant">
+                        <table id="general_board"></table>
+                    </div>
+                    <h4 id = "general_remaining" style = "margin-top:2%;color:#68706C"></h4>
+
+                </div>
+
             </div>
+            
+            
+            <script type="text/javascript" src="js/contestant.json"></script>
+            <script type="text/javascript" src="js/contestant.js"></script>
 
         </body>
 
