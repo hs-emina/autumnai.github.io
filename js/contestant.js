@@ -4,9 +4,6 @@ var alldata = JSON.parse(contestant);
 // For Islington Leaderboard
 var islington = alldata[3].slice(0, 101);
 
-if (islington.length > 100) {
-    document.getElementById("islington").innerHTML = "Top " + islington.length + " players out of " + alldata[3].length + " players";
-}
 
 if (islington.length == 0) {
     document.getElementById("islington_board").innerHTML = '<tr><h3 id = "NoSubmission">No one has submitted yet. Be the first one to submit out of ' + alldata[4] + ' players ! <br> \\( * o * )/</h3></tr>';
@@ -68,9 +65,6 @@ if (islington.length == 0) {
 
 var general = alldata[1].slice(0, 151);
 
-if (general.length > 100) {
-    document.getElementById("general").innerHTML = "Top " + general.length + " players out of " + alldata[1].length + " players";
-}
 document.getElementById("general_remaining").innerHTML = "And " + alldata[2] + " more players who haven't submitted yet . . .";
 
 
