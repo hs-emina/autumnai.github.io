@@ -30,36 +30,40 @@
         <body style="margin:0;position:relative;">
 
             <div>
-                
+
                 <div id="section">
 
                     <a href="https://islington.edu.np/" target="blank"><img class="sponsorLogo" src="image/islington.png" alt="sponsor" /></a>
 
                     <div style="display:flex; height:100%; align-items: center;">
-                    
-                        <div style="text-align:center;">     
-                            
+
+                        <div style="text-align:center;">
+
                             <img class="logo" src="image/mainlogore.png" alt="mainlogo" />
-                            
-                            <p id ="launchdate">From  2020-09-12 7am UTC  to  2020-09-19 7am UTC</p>
+
+                            <p id="launchdate">From 2020-09-12 7am UTC to 2020-09-19 7am UTC</p>
 
                             <p id="intro">
-                                A seven-day programming contest organized with the collaboration of <a href="https://www.codingame.com/home" target="_blank" style="color:white">CodinGame</a>,
-                                dedicated to motivate <a href="https://islington.edu.np/" target="blank" style="color:white">Islington</a> students practice Artificial Intelligence (AI) using
-                                Codingame's interface. Even though, only Islington students qualify for prizes, everyone is invited to participate and have fun.
+                                A seven-day programming contest organized with the collaboration of <a href="https://www.codingame.com/home" target="_blank" style="color:white">CodinGame</a>, dedicated to motivate <a href="https://islington.edu.np/" target="blank"
+                                    style="color:white">Islington</a> students practice Artificial Intelligence (AI) using Codingame's interface. Even though, only Islington students qualify for prizes, everyone is invited to participate and have fun.
                             </p>
 
-                            <p id="intro">The game for the contest is <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu" target="_blank" style="color:white">Code of Kutulu</a>. You control your explorer 
-                                (character) and compete with three other players in a set of pre-generated maps. The goal is to write an Artificial Intelligence (AI) for Code of Kutulu that is 
-                                able to survive the longest.
+                            <p id="intro">The game for the contest is <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu" target="_blank" style="color:white">Code of Kutulu</a>. The goal is to write an Artificial Intelligence (AI) for Code
+                                of Kutulu that controls your explorer and is able to survive the longest out of three other players in a set of pre-generated maps. Find the full game rules <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu"
+                                    target="_blank" style="color:white">here</a>.
                             </p>
-                            
-                            <p id="intro">Find the full game rules <a href="https://www.codingame.com/multiplayer/bot-programming/code-of-kutulu" target="_blank" style="color:white">here</a>.</p>
 
-                            <p id="intro" style="color:white;text-shadow: 2px 2px 15px #b69e34;">Registeration for the contest has been closed.</p>
-                            
-                            
-                            <div id="cglogoframe"><a href="#leaderboard"><img class="cglogo" src="image/scroll.png" alt="cglogo" /></a></div>
+
+                            <p id="intro" style="color:white;text-shadow: 2px 2px 15px #b69e34;padding-bottom: 0.5%;">Registeration for the contest has been closed.</p>
+
+                            <p id="intro" style="color:#494949;text-shadow: 2px 2px 15px #b69e34;">The contest ends in : </p>
+                            <p id="countdown" style="color:white;text-shadow: 2px 2px 15px #b69e34;"></p>
+
+
+
+                            <div id="cglogoframe">
+                                <a href="#leaderboard"><img class="cglogo" src="image/scroll.png" alt="cglogo" /></a>
+                            </div>
                         </div>
 
                     </div>
@@ -73,31 +77,31 @@
                 <div id="leaderboard" style="padding-bottom:3   %">
 
                     <h2>Islington Leaderboard</h2>
-                    <h4 id = "istimer" style = "color:#979F9B"></h4>
+                    <h4 id="istimer" style="color:#979F9B"></h4>
 
                     <div id="contestant">
                         <table id="islington_board"></table>
                     </div>
-                    <h4 id = "islington_remaining" style = "margin-top:2%;color:#68706C"></h4>
+                    <h4 id="islington_remaining" style="margin-top:2%;color:#68706C"></h4>
 
                 </div>
 
                 <div id="leaderboard" style="padding-bottom:5%">
 
                     <h2>General Leaderboard</h2>
-                    <h4 id = "gtimer" style = "color:#979F9B"></h4>
-
+                    <h4 id="gtimer" style="color:#979F9B"></h4>
+                    <p style="text-align: center;"><button id="progressBoard" style="margin-right: 5vmin;" onclick="changeGeneralBoard('cgrank')">CG Rank</button><button id="progressBoard" onclick="changeGeneralBoard('progress')">Progress</button></p>
                     <div id="contestant">
                         <table id="general_board"></table>
                     </div>
-                    <h4 id = "general_remaining" style = "margin-top:2%;color:#68706C"></h4>
+                    <h4 id="general_remaining" style="margin-top:2%;color:#68706C"></h4>
 
                 </div>
 
             </div>
 
-            
-            
+
+
             <script type="text/javascript" src="js/contestant.json"></script>
             <script type="text/javascript" src="js/contestant.js"></script>
 

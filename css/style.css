@@ -52,6 +52,18 @@ html {
     letter-spacing: 0.08vmax;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 0.1%;
+}
+
+#countdown {
+    color: #494949;
+    text-align: center;
+    font-family: champ;
+    font-size: 1.25vmax;
+    line-height: 1.8vmax;
+    letter-spacing: 0.08vmax;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 0.5%;
 }
 
@@ -68,7 +80,7 @@ button {
     color: white;
     border: 1.5px solid white;
     font-family: coco;
-    font-size: 1.5vmax;
+    font-size: 3vmax;
     padding: 0.75vmax;
 }
 
@@ -77,6 +89,20 @@ button:focus {
     background-color: white;
     color: #F2BB13;
     outline: None;
+}
+
+#progressBoard {
+    font-size: 1.2vmax;
+    background-color: transparent;
+    color: #F2BB13;
+    border: 3px solid #F2BB13;
+}
+
+#progressBoard:hover {
+    font-size: 1.2vmax;
+    color: white;
+    background-color: #F2BB13;
+    border: 3px solid transparent;
 }
 
 #cglogoframe {

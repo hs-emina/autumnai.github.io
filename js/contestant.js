@@ -63,16 +63,31 @@ if (islington.length == 0) {
 
 // For General Leaderboard
 
-var general = alldata[1].slice(0, 151);
+var general = alldata[1].slice(0, 300);
 
 document.getElementById("general_remaining").innerHTML = "And " + alldata[2] + " more players who haven't submitted yet . . .";
 
 
 
 var gcounter = 0;
-var grunner = setInterval(generalBoard, 0);
+var curChoice = "cgrank";
+var grunner = setInterval(generalBoard(curChoice), 0);
 
-function generalBoard() {
+function changeGeneralBoard(choice) {
+    if (choice != curChoice) {
+        curChoice = choice;
+        generalBoard(curChoice);
+        console.log(choice);
+    }
+}
+
+function generalBoard(option) {
+    if (option == "cgrank") {
+        general = alldata[1].slice(0, 300);
+    } else {
+        general = alldata[5].slice(0, 300).reverse();
+    }
+
     var finaloutput = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th><th>Country</th></tr></br>';
     for (var i = 0; i < general.length; i++) {
         var output = "";
@@ -141,6 +156,34 @@ var x = setInterval(function() { // Display the time passed since last update
     } else {
         document.getElementById("istimer").innerHTML = "-- Last updated " + seconds + "s ago --";
         document.getElementById("gtimer").innerHTML = "-- Last updated " + seconds + "s ago --";
+    }
+
+}, 1000);
+
+
+
+var countDownTo = new Date("Sep 19, 2020 07:00:00").getTime(); // Time of the lastest update that occured 
+var x = setInterval(function() { // Display the time passed since last update
+    var now = new Date;
+    var timestamp = now.getUTCFullYear().toString() + "-" + (now.getUTCMonth() + 1).toString().padStart(2, '0') + "-" + now.getUTCDate().toString().padStart(2, '0') + " " + now.getUTCHours().toString().padStart(2, '0') + ":" + now.getUTCMinutes().toString().padStart(2, '0') + ":" + now.getUTCSeconds().toString().padStart(2, '0')
+    var utc_timestamp = new Date(timestamp).getTime();
+
+    if (countDownTo >= utc_timestamp) {
+        var difference = countDownTo - utc_timestamp;
+        var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        if (days > 0) {
+            document.getElementById("countdown").innerHTML = "-- " + days + "d " + hours + "h " + minutes + "m " + seconds + "s left --";
+        } else if (hours > 0) {
+            document.getElementById("countdown").innerHTML = "-- " + hours + "h " + minutes + "m " + seconds + "s left --";
+        } else if (hours == 0 && minutes > 0) {
+            document.getElementById("countdown").innerHTML = "-- " + minutes + "m " + seconds + "s left --";
+        } else {
+            document.getElementById("countdown").innerHTML = "-- " + seconds + "s left --";
+        }
     }
 
 }, 1000);
