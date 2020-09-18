@@ -239,6 +239,64 @@ th {
     border-radius: 50%;
 }
 
+#ifirstAvatar {
+    width: 15vmin;
+    height: 15vmin;
+    object-fit: cover;
+    border: 9px solid #F2BB13;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#isecondAvatar {
+    width: 9vmin;
+    height: 9vmin;
+    object-fit: cover;
+    border: 7px solid #C0C0C0;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#ithirdAvatar {
+    width: 8vmin;
+    height: 8vmin;
+    object-fit: cover;
+    border: 5px solid #e29343;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#gfirstAvatar {
+    width: 15vmin;
+    height: 15vmin;
+    object-fit: cover;
+    border: 9px solid #F2BB13;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#gsecondAvatar {
+    width: 9vmin;
+    height: 9vmin;
+    object-fit: cover;
+    border: 7px solid #C0C0C0;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#gthirdAvatar {
+    width: 8vmin;
+    height: 8vmin;
+    object-fit: cover;
+    border: 5px solid #e29343;
+    justify-content: center;
+    border-radius: 50%;
+}
+
 #league {
     width: 5vmin;
     height: auto;

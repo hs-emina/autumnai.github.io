@@ -18,10 +18,21 @@ if (islington.length == 0) {
         var finaloutput = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th></tr></br>';
         for (var i = 0; i < islington.length; i++) {
             var output = "";
+            var tempava = "image/default.png";
             if (islington[i].avatar != "default") {
                 output += '<td style="text-align: right"><img id="avatar" src="https://static.codingame.com/servlet/fileservlet?id=' + islington[i].avatar + '&amp;format=navigation_avatar" loading="lazy" alt="' + islington[i].pseudo + '"></td>';
+                tempava = 'https://static.codingame.com/servlet/fileservlet?id=' + islington[i].avatar + '';
             } else {
                 output += '<td style="text-align: right"><img id="avatar" src="image/default.png" loading="lazy" alt="' + islington[i].pseudo + '"></td>';
+            }
+
+
+            if (i == 0) {
+                document.getElementById('ifirstAvatar').src = tempava;
+            } else if (i == 1) {
+                document.getElementById('isecondAvatar').src = tempava;
+            } else if (i == 2) {
+                document.getElementById('ithirdAvatar').src = tempava;
             }
 
             output += '<td style="text-align: left; padding-left:3%"><a id = "profile" href = "profile.html?pseudo=' + islington[i].pseudo + '">' + islington[i].pseudo + '</a></td>';
@@ -91,12 +102,21 @@ function generalBoard(option = curChoice) {
     var finaloutput = '<tr><th></th><th style="text-align: left;padding-left:2%">&nbsp;Username&nbsp;</th><th>&nbsp;Rank&nbsp;</th><th>&nbsp;CG&nbsp;Rank&nbsp;</th></th><th>&nbsp;Progress&nbsp;</th><th>League</th><th>Prog.&nbsp;Lang.</th><th>Country</th></tr></br>';
     for (var i = 0; i < general.length; i++) {
         var output = "";
+        var tempava = "image/default.png";
         if (general[i].avatar != "default") {
             output += '<td style="text-align: right"><img id="avatar" src="https://static.codingame.com/servlet/fileservlet?id=' + general[i].avatar + '&amp;format=navigation_avatar" loading="lazy" alt="' + general[i].pseudo + '"></td>';
+            tempava = 'https://static.codingame.com/servlet/fileservlet?id=' + general[i].avatar + '';
         } else {
             output += '<td style="text-align: right"><img id="avatar" src="image/default.png" loading="lazy" alt="' + general[i].pseudo + '"></td>';
         }
 
+        if (i == 0) {
+            document.getElementById('gfirstAvatar').src = tempava;
+        } else if (i == 1) {
+            document.getElementById('gsecondAvatar').src = tempava;
+        } else if (i == 2) {
+            document.getElementById('gthirdAvatar').src = tempava;
+        }
         output += '<td style="text-align: left; padding-left:3%"><a id = "profile" href = "profile.html?pseudo=' + general[i].pseudo + '">' + general[i].pseudo + '</a></td>';
         output += '<td>' + (i + 1) + '</td>';
         output += '<td>' + general[i].globalRank + '</td>';
