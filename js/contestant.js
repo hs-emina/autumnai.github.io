@@ -9,7 +9,7 @@ if (islington.length == 0) {
     document.getElementById("islington_board").innerHTML = '<tr><h3 id = "NoSubmission">No one has submitted yet. Be the first one to submit out of ' + alldata[4] + ' players ! <br> \\( * o * )/</h3></tr>';
 
 } else {
-    document.getElementById("islington_remaining").innerHTML = "And " + alldata[4] + " more players who haven't submitted yet . . .";;
+    document.getElementById("islington_remaining").innerHTML = "And " + alldata[4] + " more players who haven't submitted yet . . .";
 
     var counter = 0;
     var runner = setInterval(islingtonBoard, 0);
@@ -81,7 +81,7 @@ function changeGeneralBoard(choice) {
     }
 }
 
-function generalBoard(option) {
+function generalBoard(option = curChoice) {
     if (option == "cgrank") {
         general = alldata[1].slice(0, 300);
     } else {
