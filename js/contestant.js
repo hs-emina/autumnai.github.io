@@ -154,56 +154,56 @@ function changeGInterval() {
 
 
 
-var countDownFrom = new Date(alldata[0]).getTime(); // Time of the lastest update that occured 
-const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+// var countDownFrom = new Date(alldata[0]).getTime(); // Time of the lastest update that occured 
+// const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-var x = setInterval(function() { // Display the time passed since last update
-    var now = new Date;
-    var timestamp = now.getUTCFullYear().toString() + "-" + (now.getUTCMonth() + 1).toString().padStart(2, '0') + "-" + now.getUTCDate().toString().padStart(2, '0') + " " + now.getUTCHours().toString().padStart(2, '0') + ":" + now.getUTCMinutes().toString().padStart(2, '0') + ":" + now.getUTCSeconds().toString().padStart(2, '0')
-    var utc_timestamp = new Date(timestamp).getTime();
+// var x = setInterval(function() { // Display the time passed since last update
+//     var now = new Date;
+//     var timestamp = now.getUTCFullYear().toString() + "-" + (now.getUTCMonth() + 1).toString().padStart(2, '0') + "-" + now.getUTCDate().toString().padStart(2, '0') + " " + now.getUTCHours().toString().padStart(2, '0') + ":" + now.getUTCMinutes().toString().padStart(2, '0') + ":" + now.getUTCSeconds().toString().padStart(2, '0')
+//     var utc_timestamp = new Date(timestamp).getTime();
 
-    var difference = utc_timestamp - countDownFrom;
-    var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+//     var difference = utc_timestamp - countDownFrom;
+//     var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    if (hours > 0) {
-        document.getElementById("istimer").innerHTML = "-- Last updated " + hours + "h " + minutes + "m " + seconds + "s ago --";
-        document.getElementById("gtimer").innerHTML = "-- Last updated " + hours + "h " + minutes + "m " + seconds + "s ago --";
-    } else if (hours == 0 && minutes > 0) {
-        document.getElementById("istimer").innerHTML = "-- Last updated " + minutes + "m " + seconds + "s ago --";
-        document.getElementById("gtimer").innerHTML = "-- Last updated " + minutes + "m " + seconds + "s ago --";
-    } else {
-        document.getElementById("istimer").innerHTML = "-- Last updated " + seconds + "s ago --";
-        document.getElementById("gtimer").innerHTML = "-- Last updated " + seconds + "s ago --";
-    }
+//     if (hours > 0) {
+//         document.getElementById("istimer").innerHTML = "-- Last updated " + hours + "h " + minutes + "m " + seconds + "s ago --";
+//         document.getElementById("gtimer").innerHTML = "-- Last updated " + hours + "h " + minutes + "m " + seconds + "s ago --";
+//     } else if (hours == 0 && minutes > 0) {
+//         document.getElementById("istimer").innerHTML = "-- Last updated " + minutes + "m " + seconds + "s ago --";
+//         document.getElementById("gtimer").innerHTML = "-- Last updated " + minutes + "m " + seconds + "s ago --";
+//     } else {
+//         document.getElementById("istimer").innerHTML = "-- Last updated " + seconds + "s ago --";
+//         document.getElementById("gtimer").innerHTML = "-- Last updated " + seconds + "s ago --";
+//     }
 
-}, 1000);
+// }, 1000);
 
 
 
-var countDownTo = new Date("Sep 19, 2020 07:00:00").getTime(); // Time of the lastest update that occured 
-var x = setInterval(function() { // Display the time passed since last update
-    var now = new Date;
-    var timestamp = now.getUTCFullYear().toString() + "-" + (now.getUTCMonth() + 1).toString().padStart(2, '0') + "-" + now.getUTCDate().toString().padStart(2, '0') + " " + now.getUTCHours().toString().padStart(2, '0') + ":" + now.getUTCMinutes().toString().padStart(2, '0') + ":" + now.getUTCSeconds().toString().padStart(2, '0')
-    var utc_timestamp = new Date(timestamp).getTime();
+// var countDownTo = new Date("Sep 19, 2020 07:00:00").getTime(); // Time of the lastest update that occured 
+// var x = setInterval(function() { // Display the time passed since last update
+//     var now = new Date;
+//     var timestamp = now.getUTCFullYear().toString() + "-" + (now.getUTCMonth() + 1).toString().padStart(2, '0') + "-" + now.getUTCDate().toString().padStart(2, '0') + " " + now.getUTCHours().toString().padStart(2, '0') + ":" + now.getUTCMinutes().toString().padStart(2, '0') + ":" + now.getUTCSeconds().toString().padStart(2, '0')
+//     var utc_timestamp = new Date(timestamp).getTime();
 
-    if (countDownTo >= utc_timestamp) {
-        var difference = countDownTo - utc_timestamp;
-        var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+//     if (countDownTo >= utc_timestamp) {
+//         var difference = countDownTo - utc_timestamp;
+//         var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+//         var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+//         var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        if (days > 0) {
-            document.getElementById("countdown").innerHTML = "-- " + days + "d " + hours + "h " + minutes + "m " + seconds + "s left --";
-        } else if (hours > 0) {
-            document.getElementById("countdown").innerHTML = "-- " + hours + "h " + minutes + "m " + seconds + "s left --";
-        } else if (hours == 0 && minutes > 0) {
-            document.getElementById("countdown").innerHTML = "-- " + minutes + "m " + seconds + "s left --";
-        } else {
-            document.getElementById("countdown").innerHTML = "-- " + seconds + "s left --";
-        }
-    }
+//         if (days > 0) {
+//             document.getElementById("countdown").innerHTML = "-- " + days + "d " + hours + "h " + minutes + "m " + seconds + "s left --";
+//         } else if (hours > 0) {
+//             document.getElementById("countdown").innerHTML = "-- " + hours + "h " + minutes + "m " + seconds + "s left --";
+//         } else if (hours == 0 && minutes > 0) {
+//             document.getElementById("countdown").innerHTML = "-- " + minutes + "m " + seconds + "s left --";
+//         } else {
+//             document.getElementById("countdown").innerHTML = "-- " + seconds + "s left --";
+//         }
+//     }
 
-}, 1000);
+// }, 1000);
